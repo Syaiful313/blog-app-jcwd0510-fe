@@ -3,7 +3,6 @@ import { FC } from "react"
 import {
     Pagination,
     PaginationContent,
-    PaginationEllipsis,
     PaginationItem,
     PaginationLink,
     PaginationNext,
@@ -39,11 +38,9 @@ const PaginationSection:FC<PaginationSectionProps> = ({
       <PaginationPrevious onClick={handlePrev} />
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#">1</PaginationLink>
+      <PaginationLink >{page}</PaginationLink>
     </PaginationItem>
-    <PaginationItem>
-      <PaginationEllipsis />
-    </PaginationItem>
+   
     <PaginationItem>
       <PaginationNext onClick={handleNext} />
     </PaginationItem>
