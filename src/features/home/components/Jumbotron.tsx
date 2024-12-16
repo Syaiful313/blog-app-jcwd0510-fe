@@ -1,6 +1,6 @@
 const Jumbotron = () => {
   return (
-    <section className="mt-20 flex flex-col items-center justify-center">
+    <section className="mt-10 md:mt-20 flex flex-col items-center justify-center">
       <h1 className="text-6xl font-bold">The Bloghub</h1>
       <p className="text-xl">A blog about food, experiences and recipes</p>
     </section>
