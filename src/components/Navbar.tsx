@@ -12,7 +12,6 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem("blog-storage");
     dispath(logoutAction());
-    router.push("/");
   };
   return (
     <nav className="bg-slate-400">
@@ -25,7 +24,12 @@ const Navbar = () => {
             <Link href="/">Home</Link>
             <Link href="/">Profile</Link>
             {!user.id && <Link href="/login">Sign in</Link>}
-            {!!user.id && <p onClick={logout}>Logout</p>}
+            {!!user.id && (
+              <>
+                <p onClick={() => router.push("/write")}>write</p>
+                <p onClick={logout}>Logout</p>
+              </>
+            )}
           </div>
         </div>
       </div>

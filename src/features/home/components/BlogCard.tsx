@@ -4,6 +4,7 @@ import { FC } from "react";
 import { format } from "date-fns";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 interface BlogCardProps {
   blog: Blog;
@@ -11,6 +12,7 @@ interface BlogCardProps {
 
 const BlogCard: FC<BlogCardProps> = ({ blog }) => {
   return (
+    <Link href={`/blogs/${blog.id}`}>
     <Card>
       <CardHeader>
         <div className="relative h-[220px] w-full overflow-hidden rounded-lg">
@@ -42,6 +44,7 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
         <p className="line-clamp-4">{blog.description}</p>
       </CardContent>
     </Card>
+    </Link>
   );
 };
 
